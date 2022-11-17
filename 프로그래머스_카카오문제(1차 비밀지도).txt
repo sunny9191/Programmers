@@ -1,0 +1,26 @@
+function solution(n, arr1, arr2) {
+
+    let answer =[];
+    let real = []
+    let first = arr1.map((m)=>m.toString(2).padStart(n,0))
+    let second = arr2.map((m)=>m.toString(2).padStart(n,0))
+    console.log(first)
+    console.log(second)
+    
+    for (i=0; i< first.length; i++){
+        for(j=0; j<first[0].length; j++){
+             first[i][j] == 0 && second [i][j] ==0 ? 
+             answer.push(" ") : answer.push("#")
+        }
+    }
+    while (answer.length >0) {
+    real.push(answer.splice(0,n).join(""))
+    }
+
+
+
+return real
+
+
+    
+}
